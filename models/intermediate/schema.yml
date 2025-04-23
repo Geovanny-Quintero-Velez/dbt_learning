@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: order_payment_method_amount_with_jinja
+    description: >
+      This model create a transient table to store aggregated payment amount.
+    columns:
+      - name: ORDER_ID
+        description: Unique identifier for each order.
+        data_type: NUMBER(38,0)
+      - name: BANK_TRANSFER_AMOUNT
+        description: Total amount paid via bank transfer for each order.
+        data_type: NUMBER(38,0)
+      - name: CREDIT_CARD_AMOUNT
+        description: Total amount paid via credit card for each order.
+        data_type: NUMBER(38,0)
+      - name: GIFT_CARD_AMOUNT
+        description: Total amount paid via creditgift card for each order.
+        data_type: NUMBER(38,0)
+      - name: TOTAL_AMOUNT
+        description: Total amount.
+        data_type: NUMBER(38,0)
