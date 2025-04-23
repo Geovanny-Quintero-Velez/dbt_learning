@@ -2,8 +2,7 @@ version: 2
 
 models:
   - name: order_payment_method_amount_with_jinja
-    description: >
-      This model create a transient table to store aggregated payment amount.
+    description: '{{ doc("external_doc") }}'
     columns:
       - name: ORDER_ID
         description: Unique identifier for each order.
