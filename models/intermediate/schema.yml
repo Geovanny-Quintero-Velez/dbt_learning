@@ -1,12 +1,24 @@
 version: 2
 
 models:
+  - name: int_order_status
+    description: '{{ doc("external_doc") }}'
+    columns:
+      - name: payment_method
+        tests:
+          - check_string_length:
+            req_len: 10
+
   - name: order_payment_method_amount_with_jinja
     description: '{{ doc("external_doc") }}'
     columns:
       - name: ORDER_ID
         description: Unique identifier for each order.
         data_type: NUMBER(38,0)
+        tests: 
+          - unique
+          - not_null
+
       - name: BANK_TRANSFER_AMOUNT
         description: Total amount paid via bank transfer for each order.
         data_type: NUMBER(38,0)
