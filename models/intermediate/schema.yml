@@ -7,7 +7,7 @@ models:
       - name: payment_method
         tests:
           - check_string_length:
-            req_len: 10
+              req_len: 10
 
   - name: order_payment_method_amount_with_jinja
     description: '{{ doc("external_doc") }}'

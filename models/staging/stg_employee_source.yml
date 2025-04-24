@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: employee_source
+  - name: stg_employee_source
     database: dbt_tutorial  
     schema: raw  
     tables:

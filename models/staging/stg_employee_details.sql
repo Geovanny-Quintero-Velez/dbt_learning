@@ -9,7 +9,7 @@
 select
   *
 
-from {{ source('employee_source', 'employee_details') }}
+from {{ source('stg_employee_source', 'employee_details') }}
 
 {% if is_incremental() %}
 

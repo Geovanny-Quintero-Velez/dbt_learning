@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: employee_source
+    database: dbt_tutorial
+    schema: public
+    tables:
+      - name: Employee
+        description: 'Employee table'
